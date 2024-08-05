@@ -1,3 +1,4 @@
+import creditCardStrgy.AmexCreditCard;
 import creditCardStrgy.MasterCardCreditCard;
 import paymentMethodStrgy.CreditCardPaymentMethod;
 import paymentMethodStrgy.GiftCardPaymentMethod;
@@ -9,7 +10,7 @@ public class Store {
     }
     public void PerformedPayment(){
         ProcessPayment processPayment = new ProcessPayment();
-        processPayment.setPaymentMethod(new GiftCardPaymentMethod());
+        processPayment.setPaymentMethod(new CreditCardPaymentMethod(1.23, 1992, 10.3, new AmexCreditCard()));
         processPayment.processOrder();
     }
 
